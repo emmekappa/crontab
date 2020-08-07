@@ -10,5 +10,5 @@ jobs:
      - name: Refresh
        run: 'curl -s -H "Token: $EDICOLA_TOKEN" -X POST $EDICOLA_ENDPOINT/refreshEdicola'
        env:
-        EDICOLA_TOKEN: ${{ secrets.EDICOLA_ENDPOINT }}
-        EDICOLA_ENDPOINT: ${{ secrets.EDICOLA_TOKEN }}
+        EDICOLA_TOKEN: ${{ secrets.EDICOLA_TOKEN }}
+        EDICOLA_ENDPOINT: ${{ secrets.EDICOLA_ENDPOINT }}
