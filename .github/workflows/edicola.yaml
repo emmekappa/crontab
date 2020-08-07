@@ -2,7 +2,7 @@ name: Edicola
 
 on:
   schedule:
-    - cron: '*/2 * * * *'
+    - cron: '*/5 * * * *'
 jobs:
   trigger:
     runs-on: ubuntu-latest
