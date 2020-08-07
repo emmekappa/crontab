@@ -1,0 +1,15 @@
+name: Edicola
+
+on:
+  schedule:
+    - cron: '*/2 08-11 * * *' 
+    - cron: '*/30 * * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Refresh
+       run: 'curl -s -H "Token: $EDICOLA_TOKEN" -X POST $EDICOLA_ENDPOINT/refreshEdicola'
+       env:
+        EDICOLA_TOKEN: ${{ secrets.EDICOLA_ENDPOINT }}
+        EDICOLA_ENDPOINT: ${{ secrets.EDICOLA_TOKEN }}
