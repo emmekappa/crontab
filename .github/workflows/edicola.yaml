@@ -4,10 +4,10 @@ on:
   schedule:
     - cron: '*/2 * * * *'
 jobs:
-  build:
+  trigger:
     runs-on: ubuntu-latest
     steps:
-     - name: Refresh
+     - name: Refresh edicola
        run: 'curl -s -H "Token: $EDICOLA_TOKEN" -X POST $EDICOLA_ENDPOINT/refreshEdicola'
        env:
         EDICOLA_TOKEN: ${{ secrets.EDICOLA_TOKEN }}
