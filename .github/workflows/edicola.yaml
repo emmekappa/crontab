@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Refresh edicola
-       run: curl -s -H "Token: $EDICOLA_TOKEN" -X POST $EDICOLA_ENDPOINT/refreshEdicola
+       run: "curl -s -H \"Token: $EDICOLA_TOKEN\" -X POST $EDICOLA_ENDPOINT/refreshEdicola"
        env:
         EDICOLA_TOKEN: ${{ secrets.EDICOLA_TOKEN }}
         EDICOLA_ENDPOINT: ${{ secrets.EDICOLA_ENDPOINT }}
