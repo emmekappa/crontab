@@ -2,8 +2,8 @@ name: Edicola
 
 on:
   schedule:
-    - cron: '*/2 08-11 * * *' 
-    - cron: '*/2 * * * *'
+    - cron: '*/5 08-11 * * *' 
+    - cron: '*/5 * * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
