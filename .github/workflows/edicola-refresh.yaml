@@ -2,7 +2,7 @@ name: "Edicola: refresh"
 
 on:
   schedule:
-    - cron: '*/15 8-17 * * *'
+    - cron: '*/15 8-17 * * *' # hours are UTC
 jobs:
   trigger:
     runs-on: ubuntu-latest
