@@ -1,0 +1,14 @@
+name: "Edicola: sweeper"
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Edicola sweep download history
+       run: "curl -s -H \"Token: $EDICOLA_TOKEN\" -X POST $EDICOLA_ENDPOINT/sweepDownloadHistory"
+       env:
+        EDICOLA_TOKEN: ${{ secrets.EDICOLA_TOKEN }}
+        EDICOLA_ENDPOINT: ${{ secrets.EDICOLA_ENDPOINT }}
